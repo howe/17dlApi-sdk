@@ -26,3 +26,5 @@ hs_err_pid*
 jdgApisdk\.iml
 
 *.iml
+
+target/
