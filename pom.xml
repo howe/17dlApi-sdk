@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.jiedangou</groupId>
+    <artifactId>17dlApi-sdk</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+    <name>Nutz Maven Webapp</name>
+    <url>http://maven.nutz.cn</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.nutz</groupId>
+            <artifactId>nutz</artifactId>
+            <version>1.r.65</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>nutz</id>
+            <url>https://jfrog.nutz.cn/artifactory/jcenter</url>
+        </repository>
+        <repository>
+            <id>nutz-snapshots</id>
+            <url>https://jfrog.nutz.cn/artifactory/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <issueManagement>
+        <system>Github Issue</system>
+        <url>http://github.com/howe/17dlApi-sdk/issues</url>
+    </issueManagement>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>howe</id>
+            <name>Howe Chiang</name>
+            <email>howechiang@gmail.com</email>
+            <url>http://github.com/howe/</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/howe/17dlApi-sdk.git</connection>
+        <developerConnection>scm:git:git://github.com/howe/17dlApi-sdk.git</developerConnection>
+        <url>git://github.com/howe/17dlApi-sdk.git</url>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nutzcn-snapshots</id>
+            <name>NutzCN snapshot repository</name>
+            <url>https://jfrog.nutz.cn/artifactory/snapshots</url>
+        </snapshotRepository>
+
+        <repository>
+            <id>sonatype-release-staging</id>
+            <name>Sonatype Nexus release repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+    </distributionManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                    <useIncrementalCompilation>false</useIncrementalCompilation>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
