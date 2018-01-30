@@ -2,6 +2,15 @@
 17代练接入接口-SDK
 
 ```
+<dependency>
+    <groupId>com.jiedangou</groupId>
+    <artifactId>17dlApi-sdk</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+### 快照版
+```
 <repositories>
     <repository>
         <id>nutz</id>
@@ -25,6 +34,6 @@
 <dependency>
     <groupId>com.jiedangou</groupId>
     <artifactId>17dlApi-sdk</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
 </dependency>
 ```
