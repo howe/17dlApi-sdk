@@ -10,6 +10,8 @@
     <name>Nutz Maven Webapp</name>
     <url>http://maven.nutz.cn</url>
 
+    <description>Jiedangou is a walkthrough platform</description>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
