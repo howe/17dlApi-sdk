@@ -1,9 +1,5 @@
 package com.jiedangou.i17dl.api.sdk.util;
 
-import org.nutz.log.Log;
-import org.nutz.log.Logs;
-import sun.misc.BASE64Decoder;
-
 import javax.crypto.Cipher;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -18,15 +14,13 @@ import java.security.spec.X509EncodedKeySpec;
  */
 public class RSAUtil {
 
-    protected static final Log log = Logs.get();
-
     private static Cipher cipher;
 
     static {
         try {
             cipher = Cipher.getInstance("RSA");
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
+            e.printStackTrace();
         }
     }
 
@@ -38,13 +32,13 @@ public class RSAUtil {
     public static PublicKey getPublicKey(String key) {
         try {
             byte[] keyBytes;
-            keyBytes = (new BASE64Decoder()).decodeBuffer(key);
+            keyBytes = org.nutz.repo.Base64.decode(key);
             X509EncodedKeySpec keySpec = new X509EncodedKeySpec(keyBytes);
             KeyFactory keyFactory = KeyFactory.getInstance("RSA");
             PublicKey publicKey = keyFactory.generatePublic(keySpec);
             return publicKey;
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
+            e.printStackTrace();
         }
         return null;
     }
@@ -57,13 +51,13 @@ public class RSAUtil {
     public static PrivateKey getPrivateKey(String key) {
         try {
             byte[] keyBytes;
-            keyBytes = (new BASE64Decoder()).decodeBuffer(key);
+            keyBytes = org.nutz.repo.Base64.decode(key);
             PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(keyBytes);
             KeyFactory keyFactory = KeyFactory.getInstance("RSA");
             PrivateKey privateKey = keyFactory.generatePrivate(keySpec);
             return privateKey;
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
+            e.printStackTrace();
         }
         return null;
     }
@@ -91,7 +85,7 @@ public class RSAUtil {
             byte[] enBytes = cipher.doFinal(data.getBytes());
             return org.nutz.repo.Base64.encodeToString(enBytes, true);
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
+            e.printStackTrace();
         }
         return null;
     }
@@ -109,7 +103,7 @@ public class RSAUtil {
             byte[] enBytes = cipher.doFinal(data.getBytes());
             return org.nutz.repo.Base64.encodeToString(enBytes, true);
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
+            e.printStackTrace();
         }
         return null;
     }
@@ -124,10 +118,10 @@ public class RSAUtil {
     public static String decrypt(PrivateKey privateKey, String enStr) {
         try {
             cipher.init(Cipher.DECRYPT_MODE, privateKey);
-            byte[] deBytes = cipher.doFinal((new BASE64Decoder()).decodeBuffer(enStr));
+            byte[] deBytes = cipher.doFinal(org.nutz.repo.Base64.decode(enStr));
             return new String(deBytes);
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
+            e.printStackTrace();
         }
         return null;
     }
@@ -142,10 +136,10 @@ public class RSAUtil {
     public static String decrypt(String privateKey, String enStr) {
         try {
             cipher.init(Cipher.DECRYPT_MODE, getPrivateKey(privateKey));
-            byte[] deBytes = cipher.doFinal((new BASE64Decoder()).decodeBuffer(enStr));
+            byte[] deBytes = cipher.doFinal(org.nutz.repo.Base64.decode(enStr));
             return new String(deBytes);
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
+            e.printStackTrace();
         }
         return null;
     }
@@ -169,10 +163,10 @@ public class RSAUtil {
             br.close();
             fr.close();
             cipher.init(Cipher.DECRYPT_MODE, getPrivateKey(privateKeyString));
-            byte[] deBytes = cipher.doFinal((new BASE64Decoder()).decodeBuffer(enStr));
+            byte[] deBytes = cipher.doFinal(org.nutz.repo.Base64.decode(enStr));
             return new String(deBytes);
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
+            e.printStackTrace();
         }
         return null;
     }

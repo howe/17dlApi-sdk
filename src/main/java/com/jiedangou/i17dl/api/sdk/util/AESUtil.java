@@ -13,7 +13,6 @@ import javax.crypto.spec.SecretKeySpec;
  */
 public class AESUtil {
 
-    protected static final Log log = Logs.get();
     private static final String ALGORITHM = "AES";
     private static final String TRANSFORMATION = "AES/ECB/PKCS5Padding";
 
@@ -34,7 +33,7 @@ public class AESUtil {
             cipher.init(Cipher.ENCRYPT_MODE, skey);
             crypted = cipher.doFinal(data.getBytes());
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
+            e.printStackTrace();
         }
         return org.nutz.repo.Base64.encodeToString(crypted, true);
     }
@@ -75,7 +74,7 @@ public class AESUtil {
             cipher.init(Cipher.DECRYPT_MODE, skey);
             output = cipher.doFinal(parseHexStr2Byte(data));
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
+            e.printStackTrace();
         }
         return new String(output);
     }

@@ -48,6 +48,7 @@ public class JdgUtil {
                 return map;
             }
         } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }
@@ -71,6 +72,7 @@ public class JdgUtil {
                 return buildParmas(params);
             }
         } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }
@@ -97,6 +99,7 @@ public class JdgUtil {
                 return Strings.removeLast(sb.toString().replaceAll(" , ", ",").replaceAll(" ,", ",").replaceAll(", ", ","), '&');
             }
         } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }
@@ -123,6 +126,7 @@ public class JdgUtil {
                 return Strings.removeLast(sb.toString().replaceAll(" , ", ",").replaceAll(" ,", ",").replaceAll(", ", ","), '&');
             }
         } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }
@@ -151,6 +155,7 @@ public class JdgUtil {
                     }
                 }
             } catch (Exception e) {
+                e.printStackTrace();
                 return null;
             }
         }
@@ -173,6 +178,7 @@ public class JdgUtil {
                     }
                 }
             } catch (Exception e) {
+                e.printStackTrace();
                 return null;
             }
         }
@@ -197,6 +203,7 @@ public class JdgUtil {
                     return org.nutz.repo.Base64.encodeToString(s.getBytes(Encoding.CHARSET_UTF8), true);
                 }
             } catch (Exception e) {
+                e.printStackTrace();
                 return null;
             }
         }
@@ -215,6 +222,7 @@ public class JdgUtil {
                     return new String(org.nutz.repo.Base64.decode(s));
                 }
             } catch (Exception e) {
+                e.printStackTrace();
                 return null;
             }
         }
@@ -243,6 +251,7 @@ public class JdgUtil {
                 }
             }
         } catch (Exception e) {
+            e.printStackTrace();
             return false;
         }
     }
@@ -270,6 +279,7 @@ public class JdgUtil {
                 return false;
             }
         } catch (Exception e) {
+            e.printStackTrace();
             return false;
         }
     }
@@ -298,6 +308,7 @@ public class JdgUtil {
                 return false;
             }
         } catch (Exception e) {
+            e.printStackTrace();
             return false;
         }
     }
@@ -320,6 +331,7 @@ public class JdgUtil {
                 return Lang.md5(buildParmas(map, new String[]{"sign"}, "") + key);
             }
         } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }
@@ -343,6 +355,7 @@ public class JdgUtil {
                 return buildParmas(params, j);
             }
         } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }
