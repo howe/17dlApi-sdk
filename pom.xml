@@ -7,8 +7,8 @@
     <artifactId>17dlApi-sdk</artifactId>
     <version>1.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Nutz Maven Webapp</name>
-    <url>http://maven.nutz.cn</url>
+    <name>17代练接入接口 - SDK</name>
+    <url>https://github.com/howe/17dlApi-sdk</url>
 
     <description>Jiedangou is a walkthrough platform</description>
 
