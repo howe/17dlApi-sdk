@@ -10,7 +10,7 @@
     <name>17代练接入接口 - SDK</name>
     <url>https://github.com/howe/17dlApi-sdk</url>
 
-    <description>Jiedangou is a walkthrough platform</description>
+    <description>接单狗电竞服务平台</description>
 
     <dependencies>
         <dependency>
