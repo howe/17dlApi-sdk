@@ -77,7 +77,7 @@ public class OrdershallUtil {
                 req.setOrderByValue(orderByValue);
                 req.setAccess_token(accessToken);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_TEST_API_URL + "/openapi/ordershall/index", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/ordershall/index", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -117,7 +117,7 @@ public class OrdershallUtil {
                 req.set_id(_id);
                 req.setAccess_token(accessToken);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_TEST_API_URL + "/openapi/ordershall/deletesearch", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/ordershall/deletesearch", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -160,7 +160,7 @@ public class OrdershallUtil {
                 req.setSource(source);
                 req.setAccess_token(accessToken);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_TEST_API_URL + "/openapi/ordershall/searchhistory", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/ordershall/searchhistory", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -194,7 +194,7 @@ public class OrdershallUtil {
                 req.setSource(source);
                 req.setAccess_token(accessToken);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_TEST_API_URL + "/openapi/ordershall/menue", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/ordershall/menue", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -233,7 +233,7 @@ public class OrdershallUtil {
                 req.setAccess_token(accessToken);
                 req.setOrderId(orderId);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_TEST_API_URL + "/openapi/ordershall/detail", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/ordershall/detail", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
