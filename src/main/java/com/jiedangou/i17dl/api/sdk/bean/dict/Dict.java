@@ -24,6 +24,8 @@ public class Dict {
 
     public static final String DATE_FORMART_FULL = "yyyy-MM-dd hh:mm:ss";
 
+    public static final String DATE_CHINA_TIMEZONE = "GMT+8";
+
     public static final String _17DL_DEV_API_URL = "http://115.238.99.70:8082";
     public static final String _17DL_TEST_API_URL = "https://twww.17dl.com";
     public static final String _17DL_PRE_API_URL = "https://prewww.17dl.com";
