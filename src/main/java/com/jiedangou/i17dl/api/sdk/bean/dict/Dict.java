@@ -22,7 +22,7 @@ public class Dict {
     // 升序
     public static final Integer _17DL_ORDERBYVALUE_ASC = 4;
 
-    public static final String DATE_FORMART_FULL = "yyyy-MM-dd hh:mm:ss";
+    public static final String DATE_FORMART_FULL = "yyyy-MM-dd HH:mm:ss";
 
     public static final String DATE_CHINA_TIMEZONE = "GMT+8";
 
