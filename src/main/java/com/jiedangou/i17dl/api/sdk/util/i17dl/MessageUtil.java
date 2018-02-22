@@ -50,7 +50,7 @@ public class MessageUtil {
                 req.setAccess_token(accessToken);
                 req.setComment(comment);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/message/leavemsg", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_TEST_API_URL + "/openapi/message/leavemsg", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -99,7 +99,7 @@ public class MessageUtil {
                 req.setId(id);
                 req.setPageSize(pageSize);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/message/ordermsg", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_TEST_API_URL + "/openapi/message/ordermsg", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
