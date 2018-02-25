@@ -58,7 +58,7 @@ public class OrderpicUtil {
                 req.setSource(source);
                 req.setComment(comment);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/orderpic/upload", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/orderpic/upload", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -109,7 +109,7 @@ public class OrderpicUtil {
                 req.setPageSize(pageSize);
                 req.setType(type);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/orderpic/gamepic", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/orderpic/gamepic", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -149,7 +149,7 @@ public class OrderpicUtil {
                 req.setAccess_token(accessToken);
                 req.setSource(source);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/orderpic/piclist", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/orderpic/piclist", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -187,7 +187,7 @@ public class OrderpicUtil {
                 req.setAccess_token(accessToken);
                 req.setSource(source);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/orderpic/onoffpic", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/orderpic/onoffpic", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -223,7 +223,7 @@ public class OrderpicUtil {
                 req.setAccess_token(accessToken);
                 req.setSource(source);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/orderpic/sts", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/orderpic/sts", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
