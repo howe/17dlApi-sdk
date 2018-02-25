@@ -12,9 +12,8 @@ import org.nutz.lang.Lang;
 import org.nutz.lang.Strings;
 
 /**
+ * 订单操作
  * Created by Jianghao on 2018/1/23
- *
- * @howechiang
  */
 public class ReceiveUtil {
 
@@ -52,7 +51,7 @@ public class ReceiveUtil {
                 req.setPassword(RSAUtil.encrypt(publicKey, payPassword));
                 req.setAccess_token(accessToken);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/receive/receiveorder", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/receive/receiveorder", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -95,7 +94,7 @@ public class ReceiveUtil {
                 req.setContent(content);
                 req.setAccess_token(accessToken);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/receive/exception", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/receive/exception", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -138,7 +137,7 @@ public class ReceiveUtil {
                 req.setContent(content);
                 req.setAccess_token(accessToken);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/receive/arbitrate", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/receive/arbitrate", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -177,7 +176,7 @@ public class ReceiveUtil {
                 req.setOrderId(orderId);
                 req.setAccess_token(accessToken);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/receive/cancelarbitrate", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/receive/cancelarbitrate", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -235,7 +234,7 @@ public class ReceiveUtil {
                 req.setPartDeposit(partDeposit);
                 req.setContent(content);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/receive/revoke", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/receive/revoke", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -274,7 +273,7 @@ public class ReceiveUtil {
                 req.setOrderId(orderId);
                 req.setAccess_token(accessToken);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/receive/cancelrevoke", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/receive/cancelrevoke", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -313,7 +312,7 @@ public class ReceiveUtil {
                 req.setOrderId(orderId);
                 req.setAccess_token(accessToken);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/receive/accepted", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/receive/accepted", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -360,7 +359,7 @@ public class ReceiveUtil {
                 req.setAccess_token(accessToken);
                 req.setPassword(RSAUtil.encrypt(publicKey, payPassword));
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/receive/agreerevoke", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/receive/agreerevoke", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -400,7 +399,7 @@ public class ReceiveUtil {
                 req.setOrderId(orderId);
                 req.setAccess_token(accessToken);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/receive/cancelaccepted", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/receive/cancelaccepted", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -443,7 +442,7 @@ public class ReceiveUtil {
                 req.setContent(content);
                 req.setAccess_token(accessToken);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/receive/cancelexception", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/receive/cancelexception", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }

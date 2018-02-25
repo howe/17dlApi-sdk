@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jiedangou</groupId>
     <artifactId>17dlApi-sdk</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
     <packaging>jar</packaging>
     <name>17代练接入接口 - SDK</name>
     <url>https://github.com/howe/17dlApi-sdk</url>
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>org.nutz</groupId>
             <artifactId>nutz</artifactId>
-            <version>1.r.66-SNAPSHOT</version>
+            <version>1.r.65</version>
         </dependency>
     </dependencies>
 

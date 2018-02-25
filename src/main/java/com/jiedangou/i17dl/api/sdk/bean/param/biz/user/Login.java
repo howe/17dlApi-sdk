@@ -7,6 +7,9 @@ package com.jiedangou.i17dl.api.sdk.bean.param.biz.user;
  */
 public class Login {
 
+    /**
+     * 用户ID
+     */
     private Integer id;
 
     public Integer getId() {
@@ -17,6 +20,9 @@ public class Login {
         this.id = id;
     }
 
+    /**
+     * 令牌
+     */
     private String access_token;
 
     public String getAccess_token() {

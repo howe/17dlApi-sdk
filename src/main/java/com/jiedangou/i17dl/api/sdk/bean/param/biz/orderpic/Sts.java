@@ -7,6 +7,9 @@ package com.jiedangou.i17dl.api.sdk.bean.param.biz.orderpic;
  */
 public class Sts {
 
+    /**
+     * 上传用户ID
+     */
     private String accessKeyId;
 
     public String getAccessKeyId() {
@@ -17,6 +20,9 @@ public class Sts {
         this.accessKeyId = accessKeyId;
     }
 
+    /**
+     * 上传用户密钥
+     */
     private String accessKeySecret;
 
     public String getAccessKeySecret() {
@@ -27,6 +33,9 @@ public class Sts {
         this.accessKeySecret = accessKeySecret;
     }
 
+    /**
+     * 上传凭证
+     */
     private String securityToken;
 
     public String getSecurityToken() {
@@ -37,6 +46,9 @@ public class Sts {
         this.securityToken = securityToken;
     }
 
+    /**
+     * 空间
+     */
     private String bucket;
 
     public String getBucket() {
@@ -47,6 +59,9 @@ public class Sts {
         this.bucket = bucket;
     }
 
+    /**
+     * 域名
+     */
     private String endpoint;
 
     public String getEndpoint() {

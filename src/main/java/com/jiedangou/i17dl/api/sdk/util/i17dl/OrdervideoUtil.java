@@ -13,9 +13,8 @@ import org.nutz.lang.Lang;
 import org.nutz.lang.Strings;
 
 /**
+ * 订单视频
  * Created by Jianghao on 2018/1/24
- *
- * @howechiang
  */
 public class OrdervideoUtil {
 
@@ -69,7 +68,7 @@ public class OrdervideoUtil {
                 req.setTitle(title);
                 req.setThumbnail(thumbnail);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/ordervideo/upload", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/ordervideo/upload", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
@@ -117,7 +116,7 @@ public class OrdervideoUtil {
                 req.setAccess_token(accessToken);
                 req.setSource(source);
                 req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-                String json = HttpUtil.post(Dict._17DL_DEV_API_URL + "/openapi/ordervideo/videolist", Lang.obj2nutmap(req));
+                String json = HttpUtil.post(Dict._17DL_API_URL + "/openapi/ordervideo/videolist", Lang.obj2nutmap(req));
                 if (json.indexOf("info") < 0) {
                     throw new Exception("接口异常");
                 }
