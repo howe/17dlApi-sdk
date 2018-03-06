@@ -1,5 +1,6 @@
 package com.jiedangou.i17dl.api.sdk.util;
 
+import org.nutz.lang.Lang;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
 
@@ -34,6 +35,7 @@ public class AESUtil {
             crypted = cipher.doFinal(data.getBytes());
         } catch (Exception e) {
             e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
         return org.nutz.repo.Base64.encodeToString(crypted, true);
     }
@@ -75,6 +77,7 @@ public class AESUtil {
             output = cipher.doFinal(parseHexStr2Byte(data));
         } catch (Exception e) {
             e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
         return new String(output);
     }

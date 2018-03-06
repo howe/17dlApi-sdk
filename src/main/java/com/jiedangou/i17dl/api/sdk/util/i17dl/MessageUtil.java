@@ -58,7 +58,7 @@ public class MessageUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -107,7 +107,7 @@ public class MessageUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            throw Lang.wrapThrow(e);
         }
     }
 }

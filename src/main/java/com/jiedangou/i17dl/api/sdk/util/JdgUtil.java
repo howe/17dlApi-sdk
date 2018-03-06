@@ -49,7 +49,7 @@ public class JdgUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -73,7 +73,7 @@ public class JdgUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -96,11 +96,14 @@ public class JdgUtil {
                         sb.append(k + "=" + ((v instanceof Date) ? Times.format(Dict.DATE_FORMART_FULL, (Date) v) : v) + j);
                     }
                 });
-                return Strings.removeLast(sb.toString().replaceAll(" , ", ",").replaceAll(" ,", ",").replaceAll(", ", ","), '&');
+                return Strings.removeLast(sb.toString()
+                        .replaceAll(" , ", ",")
+                        .replaceAll(" ,", ",")
+                        .replaceAll(", ", ","), '&');
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -123,11 +126,13 @@ public class JdgUtil {
                         sb.append(k + "=" + v + "&");
                     }
                 });
-                return Strings.removeLast(sb.toString().replaceAll(" , ", ",").replaceAll(" ,", ",").replaceAll(", ", ","), '&');
+                return Strings.removeLast(sb.toString().replaceAll(" , ", ",")
+                        .replaceAll(" ,", ",")
+                        .replaceAll(", ", ","), '&');
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -156,7 +161,7 @@ public class JdgUtil {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                return null;
+                throw Lang.wrapThrow(e);
             }
         }
 
@@ -179,7 +184,7 @@ public class JdgUtil {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                return null;
+                throw Lang.wrapThrow(e);
             }
         }
     }
@@ -204,7 +209,7 @@ public class JdgUtil {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                return null;
+                throw Lang.wrapThrow(e);
             }
         }
 
@@ -223,7 +228,7 @@ public class JdgUtil {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                return null;
+                throw Lang.wrapThrow(e);
             }
         }
     }
@@ -252,7 +257,7 @@ public class JdgUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return false;
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -280,7 +285,7 @@ public class JdgUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return false;
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -309,7 +314,7 @@ public class JdgUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return false;
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -332,7 +337,7 @@ public class JdgUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -356,8 +361,7 @@ public class JdgUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            throw Lang.wrapThrow(e);
         }
     }
-
 }

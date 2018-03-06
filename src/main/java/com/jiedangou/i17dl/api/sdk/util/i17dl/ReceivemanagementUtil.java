@@ -57,7 +57,7 @@ public class ReceivemanagementUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -100,7 +100,7 @@ public class ReceivemanagementUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -135,7 +135,7 @@ public class ReceivemanagementUtil {
             return Lang.map2Object(resp.getData(), Menue.class);
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            throw Lang.wrapThrow(e);
         }
     }
 }

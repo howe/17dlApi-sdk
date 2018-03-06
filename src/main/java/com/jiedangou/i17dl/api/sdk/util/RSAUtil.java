@@ -1,5 +1,7 @@
 package com.jiedangou.i17dl.api.sdk.util;
 
+import org.nutz.lang.Lang;
+
 import javax.crypto.Cipher;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -21,6 +23,7 @@ public class RSAUtil {
             cipher = Cipher.getInstance("RSA");
         } catch (Exception e) {
             e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -39,8 +42,8 @@ public class RSAUtil {
             return publicKey;
         } catch (Exception e) {
             e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
-        return null;
     }
 
     /**
@@ -58,8 +61,8 @@ public class RSAUtil {
             return privateKey;
         } catch (Exception e) {
             e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
-        return null;
     }
 
     /**
@@ -86,8 +89,8 @@ public class RSAUtil {
             return org.nutz.repo.Base64.encodeToString(enBytes, true);
         } catch (Exception e) {
             e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
-        return null;
     }
 
     /**
@@ -104,8 +107,8 @@ public class RSAUtil {
             return org.nutz.repo.Base64.encodeToString(enBytes, true);
         } catch (Exception e) {
             e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
-        return null;
     }
 
     /**
@@ -122,8 +125,8 @@ public class RSAUtil {
             return new String(deBytes);
         } catch (Exception e) {
             e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
-        return null;
     }
 
     /**
@@ -140,8 +143,8 @@ public class RSAUtil {
             return new String(deBytes);
         } catch (Exception e) {
             e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
-        return null;
     }
 
     /**
@@ -167,7 +170,7 @@ public class RSAUtil {
             return new String(deBytes);
         } catch (Exception e) {
             e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
-        return null;
     }
 }
